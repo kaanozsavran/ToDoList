@@ -20,10 +20,14 @@ input[type=text]:focus {
 .todos li {
     background: #D87E7E;
     color: #fff;
-    border: 1px solid rgb(103, 91, 91);
+    border: 1px solid rgb(103, 91, 91) !important;
 
 }
 
 .delete {
     cursor: pointer;
+}
+
+.filtered {
+    display: none !important;
 }
