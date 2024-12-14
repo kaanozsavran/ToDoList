@@ -1,6 +1,7 @@
 const addForm = document.querySelector('.add');
 const list = document.querySelector('.todos');
 const search = document.querySelector('.search input');
+const clock = document.querySelector('.clock');
 
 
 
@@ -43,3 +44,22 @@ search.addEventListener('keyup', () => {
     const term = search.value.trim().toLocaleLowerCase();
     filterTodos(term);
 })
+
+const tick = () => {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0'); // 2 haneli format
+    const minutes = String(now.getMinutes()).padStart(2, '0'); // 2 haneli format
+    const seconds = String(now.getSeconds()).padStart(2, '0'); // 2 haneli format
+
+    const html =
+        `
+    <span>${hours} :</span>
+    <span>${minutes} :</span>
+    <span>${seconds}</span>
+    `;
+
+    clock.innerHTML = html;
+
+}
+
+setInterval(tick, 1000);

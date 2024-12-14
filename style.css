@@ -31,3 +31,16 @@ input[type=text]:focus {
 .filtered {
     display: none !important;
 }
+
+.clockSection {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.clock {
+    font-size: 25px;
+    color: #fff;
+    font-weight: bold;
+}
